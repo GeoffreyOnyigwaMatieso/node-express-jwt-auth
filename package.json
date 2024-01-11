@@ -17,13 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:Gmatieso/node-express-jwt-auth.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "git@github.com:Gmatieso/node-express-jwt-auth.git"
   },
   "homepage": ""
 }
