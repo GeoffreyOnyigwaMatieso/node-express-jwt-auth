@@ -9,9 +9,17 @@ module.exports.login_get = async (req, res) => {
 
 
 module.exports.signup_post = async (req, res) => {
+    
+    const { email, password } = req.body;
+    console.log(email, password);
     res.send('new signup');
+
+
 }
 
 module.exports.login_post = async (req, res) => {
-    res.send('user login')
+    // console.log(req.body);
+    const { email, password } = req.body;
+    console.log(email, password);
+    res.send('user login');
 }
