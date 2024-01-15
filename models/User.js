@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 // email validation
 const { isEmail } = require('validator');
 
+//enctrypting our password
+const bcrypt = require('bcrypt');
+
+
 // lets create a schema
 const userSchema = new mongoose.Schema({
     email:{
@@ -20,16 +24,19 @@ const userSchema = new mongoose.Schema({
 });
 
 
+// fire a fuction before doc saved to db 
+userSchema.pre('save', async function(next){
+    const salt = await bcrypt.genSalt();
+    this.password = await bcrypt.hash(this.password, salt);
+    console.log('user about to be created and saved', this);
+    next();
+})
+
+
 // fire a function after doc saved to db
 userSchema.post('save', function(doc, next){
     console.log('new user was created and saved', doc);
     next(); // next is a function that we need to call to move to the next middleware
-})
-
-// fire a fuction before doc saved to db 
-userSchema.pre('save', function(next){
-    console.log('user about to be created and saved', this);
-    next();
 })
 
 // lets create a model
