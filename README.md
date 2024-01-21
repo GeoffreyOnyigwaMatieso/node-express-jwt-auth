@@ -45,7 +45,7 @@ nodemon start
 The application will be accessible at http://localhost:3000.
 
 ## Project Structure
-Backend (Node.js/Express)
+### Backend (Node.js/Express)
 
 The backend code is in the backend directory.
 Entry point: backend/index.js
