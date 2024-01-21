@@ -40,7 +40,7 @@ Create a MongoDB database and obtain the connection URI.
 Update the config/db.js file with your MongoDB URI.
 Run the Application:
 ```
-nodemon start
+nodemon app
 ```
 The application will be accessible at http://localhost:3000.
 
