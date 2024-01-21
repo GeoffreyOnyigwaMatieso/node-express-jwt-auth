@@ -18,8 +18,8 @@ Getting Started
 Clone the Repository:
 
 ```
-git clone https://github.com/yourusername/fullstack-express-mongodb-jwt.git
-cd fullstack-express-mongodb-jwt
+git@github.com:Gmatieso/node-express-jwt-auth.git
+cd node-express-jwt-auth
 ```
 Install Dependencies:
 
