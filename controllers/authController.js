@@ -19,7 +19,8 @@ const handleErrors = (err) => {
     // duplicate error code 
     if(err.code === 11000){
         errors.email = 'that email is already registered';
-        return errors;
+        return errors; 
+
     }
 
     // validation errors
@@ -61,6 +62,7 @@ module.exports.signup_post = async (req, res) => {
         const token = createToken(user._id);
         // create a cookie
         res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000})
+        // send back a json as user._id
         res.status(201).json({user: user._id});
     }
     catch(err){
@@ -82,10 +84,19 @@ module.exports.login_post = async (req, res) => {
         const token = createToken(user._id);
         // create a cookie
         res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000})
+        // send back a json as user._id
         res.status(200).json({user: user._id})
         
-    } catch (error) {
-        const errors = handleErrors(error)
+    } catch (err) {
+        const errors = handleErrors(err);
         res.status(400).json({errors});
     }
+}
+
+module.exports.logout_get = (req, res) => {
+    // delete the required jwt or replace it with a blank cookie
+    res.cookie('jwt', '', { maxAge: 1})
+    // redirect to homepage 
+    res.redirect('/');
+    
 }
