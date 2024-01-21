@@ -21,13 +21,11 @@ Clone the Repository:
 git@github.com:Gmatieso/node-express-jwt-auth.git
 cd node-express-jwt-auth
 ```
-Install Dependencies:
-
-
+### Install Dependencies:
 ```
 npm install
 ```
-Configure Environment Variables:
+### Configure Environment Variables:
 
 Create a .env file in the root directory with the following variables:
 
@@ -37,8 +35,10 @@ PORT=3000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 ```
+### Configure the Database:
+Create a MongoDB database and obtain the connection URI.
+Update the config/db.js file with your MongoDB URI.
 Run the Application:
-
 ```
 nodemon start
 ```
