@@ -97,6 +97,6 @@ This project is licensed under the MIT License.
 ## Contact
 For any inquiries or feedback, please contact the project maintainer:
 
-Name: Your Name
-Email: your.email@example.com
+Name: Geoffrey Matieso
+Email: matiesogeoffrey@gmail.com
 Feel free to explore and enhance this full-stack application as per your project requirements. Happy coding!
