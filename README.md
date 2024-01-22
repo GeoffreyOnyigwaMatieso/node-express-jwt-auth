@@ -83,8 +83,13 @@ GET /api/profile
 
 Retrieves the user's profile information.
 Requires a valid JWT token.
+## Screenshot!
+![image](https://github.com/Gmatieso/node-express-jwt-auth/assets/55885416/89badbae-9ede-4798-9467-2d3ae0ff0d5e)
+![image](https://github.com/Gmatieso/node-express-jwt-auth/assets/55885416/376f211c-4388-49ff-aae9-e0af12d52302)
 
-## Get your live link her!
+
+
+## Get your live link here!
 
 https://node-express-jwt-auth-8r5r.onrender.com/
 
